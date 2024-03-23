@@ -6,6 +6,16 @@
     <title>N</title>
     <link rel="shortcut icon" href="favicon.png" type="image/png" />
     <style>
+      :root {
+        --light: rgb(242, 242, 247);
+        --dark: rgb(28, 28, 30);
+        --primary: rgb(48, 219, 91);
+      }
+
+      ::selection {
+        background: var(--primary);
+      }
+
       * {
         box-sizing: border-box;
         transition: all 0.33s ease-in-out;
@@ -17,8 +27,8 @@
 
       html {
         height: 100%;
-        color: rgb(28, 28, 30);
-        background-color: rgb(242, 242, 247);
+        color: var(--dark);
+        background-color: var(--light);
       }
 
       body {
@@ -39,8 +49,8 @@
 
       @media (prefers-color-scheme: dark) {
         html {
-          color: rgb(242, 242, 247);
-          background-color: rgb(28, 28, 30);
+          color: var(--light);
+          background-color: var(--dark);
         }
       }
     </style>

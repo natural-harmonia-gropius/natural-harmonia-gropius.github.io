@@ -10,6 +10,9 @@
         --light: rgb(242, 242, 247);
         --dark: rgb(28, 28, 30);
         --primary: rgb(48, 219, 91);
+
+        color: var(--dark);
+        background-color: var(--light);
       }
 
       ::selection {
@@ -25,30 +28,24 @@
           sans-serif;
       }
 
-      html {
-        height: 100%;
-        color: var(--dark);
-        background-color: var(--light);
-      }
-
       body {
-        height: 100%;
         margin: 0;
       }
 
       main {
-        height: 100%;
+        width: 100dvw;
+        height: 100dvh;
         display: grid;
-        place-items: center;
       }
 
       .hero {
-        font-size: 6vw;
+        place-self: center;
+        font-size: 6dvw;
         font-weight: bolder;
       }
 
       @media (prefers-color-scheme: dark) {
-        html {
+        :root {
           color: var(--light);
           background-color: var(--dark);
         }
